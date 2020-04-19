@@ -13,12 +13,12 @@
 ### `CREATE` & `UPDATE` **Request** Schema
 ```json
 {
-    "shopName": String,
-    "shopType": String,
-    "shopOwner": String,
-    "shopAddress": String,
-    "shopLocationLat": Number,
-    "shopLocationLng": Number
+    "shopName": "String",
+    "shopType": "String",
+    "shopOwner": "String",
+    "shopAddress": "String",
+    "shopLocationLat": "Number",
+    "shopLocationLng": "Number"
 }
 ```
 ### `READ` **Response** Schema
@@ -28,22 +28,21 @@
         {
             "shopAddress": {
                 "location": {
-                    "lat": Number,
-                    "lng": Number
+                    "lat": "Number",
+                    "lng": "Number"
                 },
-                "address": String
+                "address": "String"
             },
-            "_id": ObjectId,
-            "shopName": String,
-            "shopType": String,
-            "shopOwner": String,
-            "createdAt": DateTime [YYYY-MM-dd:HH:MM:ss.sssZ],
-            "updatedAt": DateTime [YYYY-MM-dd:HH:MM:ss.sssZ]
-        }
-        ...
+            "_id": "ObjectId",
+            "shopName": "String",
+            "shopType": "String",
+            "shopOwner": "String",
+            "createdAt": "DateTime [YYYY-MM-dd:HH:MM:ss.sssZ]",
+            "updatedAt": "DateTime [YYYY-MM-dd:HH:MM:ss.sssZ]"
+        }        
     ],
-    "message": String,
-    "status": "SUCCESS" | "ERROR"
+    "message": "String",
+    "status": "'SUCCESS' | 'ERROR'"
 }
 ```
 ### `CREATE` & `UPDATE` **Response** Schema
@@ -52,27 +51,27 @@
     "data": {
         "shopAddress": {
             "location": {
-                "lat": Number,
-                "lng": Number
+                "lat": "Number",
+                "lng": "Number"
             },
-            "address": String
+            "address": "String"
         },
-        "_id": ObjectId,
-        "shopName": String,
-        "shopType": String,
-        "shopOwner": String,
-        "createdAt": DateTime [YYYY-MM-dd:HH:MM:ss.sssZ],
-        "updatedAt": DateTime [YYYY-MM-dd:HH:MM:ss.sssZ]
+        "_id": "ObjectId",
+        "shopName": "String",
+        "shopType": "String",
+        "shopOwner": "String",
+        "createdAt": "DateTime [YYYY-MM-dd:HH:MM:ss.sssZ]",
+        "updatedAt": "DateTime [YYYY-MM-dd:HH:MM:ss.sssZ]"
     },
-    "message": String,
+    "message": "String",
     "status": "SUCCESS" | "ERROR"
 }
 ```
 ### `DELETE` **Response** Schema
 ```json
 {
-    "message": String,
+    "message": "String",
     "status": "SUCCESS" | "ERROR"
 }
 ```
-> #### NOTE: **`data`** node will not be present in error senarios.
+> #### NOTE: `data` node will not be present in error senarios.
